@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namaste Techies</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container" id="starting-animation-container">
+    <h1 class="animated-text">Namaste Techies!</h1>
+    <svg class="underline" viewBox="0 0 300 20" preserveAspectRatio="none">
+      <path id="underline-path" d="M 0,10 Q 75,0 150,10 Q 225,20 300,10" fill="none" stroke="currentColor"
+        stroke-width="2" />
+    </svg>
+  </div>
+
+  <div class="main-content" style="display: none;">
+    <header class="header" id="header">
+      <div class="header-container">
+        <div class="header-content">
+          <div class="logo">
+            <div class="logo-icon">
+              <div class="icon-inner"></div>
+            </div>
+            <span class="logo-text">AI Portal</span>
+          </div>
+          <nav class="nav">
+            <a href="#home" class="nav-link ">Home</a>
+            <a href="./news/index.html" class="nav-link">AI News</a>
+            <a href="./tools/index.html" class="nav-link">Tools</a>
+            <a href="./gems/gemini-gems.html" class="nav-link">GEMS</a>
+          </nav>
+          <div class="mobile-nav" id="mobile-nav">
+            <a href="#home" class="nav-link ">Home</a>
+            <a href="./news/index.html" class="nav-link">AI News</a>
+            <a href="./tools/index.html" class="nav-link">Tools</a>
+            <a href="./gems/gemini-gems.html" class="nav-link">GEMS</a>
+          </div>
+          <button class="mode-toggle" id="mode-toggle" aria-label="Toggle dark/light mode">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="stars-layer"></div>
+      </div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="title-line">Unleash the Power of</span>
+            <span class="title-line highlight">Next-Gen AI</span>
+            <span class="title-line">for Everyone</span>
+          </h1>
+          <p class="hero-description">
+            <strong>Empower your ideas. Accelerate your future.</strong>
+          </p>
+          <div class="hero-actions">
+            <button class="primary-button" onclick="window.location.href='./tools/index.html'">
+              <span>Explore AI Tools</span>
+              <div class="button-shine"></div>
+            </button>
+            <a href="./news/index.html"><button class="secondary-button" data-scroll-to="ai-news">
+                <span>See AI News</span>
+                <i class="fas fa-arrow-right"></i>
+              </button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-news-section" id="news">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-badge">
+            <i class="fas fa-newspaper"></i>
+            Latest Updates
+          </div>
+          <h2 class="section-title">
+            Stay Informed with Our
+            <span class="highlight">News Section</span>
+          </h2>
+          <p class="section-description">
+            Get the latest breaking news, insights, and updates from around the world.
+            Our curated news feed keeps you informed on what matters most.
+          </p>
+        </div>
+
+        <div class="news-content-grid">
+          <div class="news-features">
+            <h3 class="features-title">Why Choose Our News Platform?</h3>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="feature-content">
+                  <h4 class="feature-title">Real-time Updates</h4>
+                  <p class="feature-description">Get breaking news as it happens with our live feed</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="feature-content">
+                  <h4 class="feature-title">Expert Analysis</h4>
+                  <p class="feature-description">In-depth coverage from our team of professional journalists</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-trending-up"></i>
+                </div>
+                <div class="feature-content">
+                  <h4 class="feature-title">Trending Topics</h4>
+                  <p class="feature-description">Stay ahead with the most important stories of the day</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-feed-container">
+            <div class="news-feed-header">
+              <h4 class="feed-title">Live News Feed</h4>
+            </div>
+            <div class="animated-news-list" id="animated-news-list">
+            </div>
+          </div>
+
+          <div class="check-all-container">
+            <a href="./news/index.html"><button class="check-all-button">Check All Trending News</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="tools" id="tools">
+      <section class="testimonials-section">
+        <div class="header-content">
+          <div class="tag">Explore AI</div>
+          <h2>Discover Trending AI Tools</h2>
+        </div>
+
+        <div class="ai-tools-columns">
+          <div class="ai-tools-row" id="ai-tools-row-1"></div>
+          <div class="ai-tools-row" id="ai-tools-row-2"></div>
+          <div class="ai-tools-row" id="ai-tools-row-3"></div>
+        </div>
+
+        <div class="check-all-container">
+          <button class="check-all-button" onclick="window.location.href='ai-tools.html'">Check All Trending
+            Tools</button>
+        </div>
+      </section>
+    </section>
+    </section>
+
+    <section class="gems" id="gems">
+      <div class="section-header">
+        <div class="section-badge">
+          <span>Gemini GEMS</span>
+        </div>
+        <h2 class="section-title">Custom AI Models</h2>
+        <p class="section-description">
+          Specialized AI assistants designed for specific tasks and workflows.<br>
+          Experience the power of tailored artificial intelligence.
+        </p>
+      </div>
+
+      <div class="site-footer-marquee" data-site-footer-marquee style="--item-count: 8;">
+        <div class="site-footer-marquee__track">
+          <div class="site-footer-marquee__grid" id="marquee-grid">
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <div class="icon-inner"></div>
+              </div>
+              <span class="logo-text">AI Portal</span>
+            </div>
+            <p class="footer-description">
+              Empowering the future through artificial intelligence.
+              Discover, learn, and innovate with cutting-edge AI solutions.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-discord"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4 class="footer-title">Platform</h4>
+              <ul class="footer-list">
+                <li><a href="#news">AI News</a></li>
+                <li><a href="ai-tools.html">Tools</a></li>
+                <li><a href="gemini-gems.html">GEMS</a></li>
+                <li><a href="#news">News</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4 class="footer-title">Resources</h4>
+              <ul class="footer-list">
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">API Reference</a></li>
+                <li><a href="#">Tutorials</a></li>
+                <li><a href="#">Community</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4 class="footer-title">Company</h4>
+              <ul class="footer-list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">© 2024 AI Portal. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <div class="notification" id="notification">
+      <div class="notification-content">
+        <i class="fas fa-check-circle"></i>
+        <span class="notification-text">Action completed successfully!</span>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

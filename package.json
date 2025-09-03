@@ -1,0 +1,28 @@
+{
+  "name": "lumix-project",
+  "version": "1.0.0",
+  "description": "AI-powered GitHub repository explorer",
+  "main": "github/server.js",
+  "scripts": {
+    "start": "node github/server.js",
+    "dev": "node github/server.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.7.1",
+    "axios": "^1.6.0",
+    "dotenv": "^17.2.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": [
+    "github",
+    "ai",
+    "express",
+    "oauth"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
